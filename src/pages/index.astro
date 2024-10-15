@@ -1,9 +1,9 @@
 ---
-import Layout from '@layouts/Layout.astro';
+
+import Portada from "@components/portada";
+import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Joan Guinart">
-	HOLAAA
+  <Portada client:only="react" />
 </Layout>
-
-

@@ -1,0 +1,51 @@
+.test1 {
+    width: 100%;
+    height: 100dvh;
+    background-color: red;
+  }
+  .portada {
+    width: 100%;
+    height: 100dvh;
+    background-color: aquamarine;
+    position: relative;
+    overflow: hidden;
+    .nom {
+      position: absolute;
+      font-size: 90px;
+      text-transform: uppercase;
+      font-weight: 600;
+      left: 10%;
+      top: 20%;
+      animation: goDown 1.5s ease-out;
+      opacity: 0;
+    }
+    .imatge {
+      position: absolute;
+      width: 500px;
+      aspect-ratio: 1/1;
+      border: 1px solid black;
+      border-radius: 50%;
+      right: 20%;
+      top: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: toLeft 2s ease-out;
+    }
+  }
+  @keyframes goDown {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 20%;
+    }
+  }
+  @keyframes toLeft {
+    0% {
+      right: -50%;
+    }
+    100% {
+      right: 20%;
+    }
+  }

@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "joan-guinart",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -14,8 +14,11 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.16.0",
+    "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "scrollmagic": "^2.0.8"
+    "sass": "^1.79.5",
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4"
   }
 }

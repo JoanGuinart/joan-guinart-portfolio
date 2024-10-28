@@ -1,64 +1,48 @@
+
 .test {
+  width: 100%;
+  height: 100dvh;
+  background-color: rgb(0, 255, 217);
+}
+.portada {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  .nom,
+  .text {
+    width: 100%;
+    height: calc(50dvh + 1px);
+    font-size: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 144);
+    z-index: 2;
+    font-family: "Cairo", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .nom {
+    align-items: end;
+  }
+  .text {
+    align-items: start;
+  }
+  .test {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100dvh;
-    background-color: red;
+    z-index: -1;
+    font-size: 200px;
   }
-  .portada {
-    width: 100%;
-    height: 100dvh;
-    background-color: rgb(204, 227, 219);
-    position: relative;
-    overflow: hidden;
-    .nom {
-      position: absolute;
-      font-size: 90px;
-      text-transform: uppercase;
-      font-weight: 600;
-      left: 10%;
-      top: 30%;
-      z-index: 2;
-      animation: goDown 1.5s ease-out;
-    }
-    .text{
-      position: absolute;
-      font-size: 30px;
-      font-weight: 400;
-      left: 10%;
-      top: 50%;
-      width: 40%;
-      text-wrap: balance;
-      opacity: 0;
-    }
-    .imatge {
-      position: absolute;
-      width: 500px;
-      background-image: url("/public/img/Joan_Guinart_Selfie.jpeg");
-      background-position: center center;
-      background-size: contain;
-      aspect-ratio: 1/1;
-      border: 1px solid black;
-      border-radius: 50%;
-      right: 20%;
-      top: 10%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: toLeft 2s ease-out;
-    }
-  }
-  @keyframes goDown {
-    0% {
-      top: -50%;
-    }
-    100% {
-      top: 30%;
-    }
-  }
-  @keyframes toLeft {
-    0% {
-      right: -50%;
-    }
-    100% {
-      right: 20%;
-    }
-  }
+}
+.projectes {
+  width: 100%;
+  height: 100dvh;
+  background-color: rgb(0, 119, 255);
+  font-size: 200px;
+
+}

@@ -16,22 +16,34 @@ const Portada = () => {
       scrollTrigger: {
         trigger: container.current,
         start: "top top",
-        end: "+=4000",
+        end: "+=2000",
         pin: true,
-        scrub: 1,
+        scrub: 0.5,
         markers: true,
       },
     });
 
     portada
       .fromTo(
+        ".nom-nom",
+        { y: 0 },
+        { y: -window.innerHeight / 2, duration: 4, ease: "power2.in" }
+      )
+      .fromTo(
+        ".text-text",
+        { y: 0 },
+        { y: window.innerHeight / 2, duration: 4, ease: "power2.in" },
+        "<"
+      )
+      .fromTo(
         ".nom",
         { y: 0 },
         {
           y: -window.innerHeight / 2,
           duration: 4,
-          ease: "power1.out",
-        }
+          ease: "power2.in",
+        },
+        "<"
       )
       .fromTo(
         ".text",
@@ -39,30 +51,18 @@ const Portada = () => {
         {
           y: window.innerHeight / 2,
           duration: 4,
-          ease: "power1.out",
+          ease: "power2.in",
         },
-        "<"
-      )
-      .fromTo(
-        ".nom-nom",
-        { y: 0 },
-        { y: -window.innerHeight / 4, duration: 4, ease: "circ.out" },
-        "<"
-      )
-      .fromTo(
-        ".text-text",
-        { y: 0 },
-        { y: window.innerHeight / 4, duration: 4, ease: "circ.out" },
         "<"
       );
 
     gsap.to(".lorem", {
-      y: window.innerHeight / 6,
+      y: window.innerHeight / 2,
       scrollTrigger: {
         trigger: ".projectes",
         start: "top bottom",
         end: "bottom top",
-        scrub: 1,
+        scrub: 0.5,
       },
     });
   });
@@ -95,7 +95,9 @@ const Portada = () => {
   return (
     <>
       <div id="Portada" className="portada scroll-container" ref={container}>
-        <div className="scroll-pointer" ref={scrollPointer}>SCROLL</div>
+        <div className="scroll-pointer" ref={scrollPointer}>
+          SCROLL
+        </div>
         <div id="nom" className="nom">
           <h1 className="nom-nom">Joan Guinart</h1>
         </div>

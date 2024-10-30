@@ -1,5 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Varela&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Varela&display=swap");
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.projectes {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:first-child {
+    background-color: #fff;
+  }
+  &:not(:first-child) {
+    background-color: transparent;
+  }
+  .projecte {
+    background-color: #000;
+    border: 5px solid #fff898;
+    border-radius: 50px;
+    width: calc(100% - 120px);
+    height: calc(100dvh - 120px);
+  }
 }

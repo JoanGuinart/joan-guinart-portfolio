@@ -16,10 +16,9 @@ const Portada = () => {
       scrollTrigger: {
         trigger: container.current,
         start: "top top",
-        end: "+=2000",
+        end: "+=4000",
         pin: true,
         scrub: 0.5,
-        markers: true,
       },
     });
 
@@ -119,19 +118,11 @@ const Portada = () => {
           </p>
         </div>
       </div>
-      <div
-        id="Projectes"
-        className="projectes"
-        style={{ position: "sticky", top: "0" }}
-      >
-        <p>miu miau</p>
+      <div id="Projectes" className="projectes">
+        <div className="projecte"></div>
       </div>
-      <div
-        id="Projectes"
-        className="projectes"
-        style={{ position: "sticky", top: "0", backgroundColor: "#f8f9" }}
-      >
-        <p>miu miau</p>
+      <div id="Projectes" className="projectes">
+        <div className="projecte"></div>
       </div>
     </>
   );

@@ -38,7 +38,7 @@ const Portada = () => {
         ".nom",
         { y: 0 },
         {
-          y: -window.innerHeight / 2,
+          y: -window.innerHeight / 1.5,
           duration: 4,
           ease: "power2.in",
         },
@@ -48,7 +48,7 @@ const Portada = () => {
         ".text",
         { y: -1 },
         {
-          y: window.innerHeight / 2,
+          y: window.innerHeight / 1.5,
           duration: 4,
           ease: "power2.in",
         },
@@ -117,12 +117,6 @@ const Portada = () => {
             enim minus! Minima ab labore non.
           </p>
         </div>
-      </div>
-      <div id="Projectes" className="projectes">
-        <div className="projecte"></div>
-      </div>
-      <div id="Projectes" className="projectes">
-        <div className="projecte"></div>
       </div>
     </>
   );

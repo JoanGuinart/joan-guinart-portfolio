@@ -1,31 +1,70 @@
-<div id="Projectes" class="projectes">
-  <div class="projecte">
-    <div class="blanc">
-      <h2>Titol Projecte</h2>
-      <p>veure projecte</p>
-      <p>client</p>
-      <p>tecnologia utilitzada</p>
-      <p>disseny</p>
-    </div>
-    <div class="vermell">
-      <div class="laptop-container">
-        <div class="screen">
-          <!-- Aquí puedes añadir el contenido de la pantalla -->
+---
+const projects = [
+  {
+    title: "Projecte 1",
+    link: "veure projecte",
+    client: "Client 1",
+    technology: "Tecnologia 1",
+    design: "Disseny 1",
+    imgSrc: "/img/infonet.png",
+  },
+  {
+    title: "Projecte 2",
+    link: "veure projecte",
+    client: "Client 2",
+    technology: "Tecnologia 2",
+    design: "Disseny 2",
+    imgSrc: "/img/infonet.png",
+  },
+  {
+    title: "Projecte 3",
+    link: "veure projecte",
+    client: "Client 3",
+    technology: "Tecnologia 3",
+    design: "Disseny 3",
+    imgSrc: "/img/infonet.png",
+  },
+  {
+    title: "Projecte 4",
+    link: "veure projecte",
+    client: "Client 4",
+    technology: "Tecnologia 4",
+    design: "Disseny 4",
+    imgSrc: "/img/infonet.png",
+  },
+];
+---
+
+{
+  projects.map((project) => (
+    <div id="Projectes" class="projectes">
+      <div class="projecte">
+        <div class="blanc">
+          <h2>{project.title}</h2>
+          <p>{project.link}</p>
+          <p>{project.client}</p>
+          <p>{project.technology}</p>
+          <p>{project.design}</p>
         </div>
-        <div class="laptop-base"></div>
+        <div class="vermell">
+          <div class="laptop-container">
+            <div class="screen">
+              <img src={project.imgSrc} alt={project.title} />
+            </div>
+            <div class="laptop-base" />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div id="Projectes" class="projectes">
-  <div class="projecte"></div>
-</div>
+  ))
+}
 
 <style lang="scss">
   .projectes {
     position: sticky;
     top: 0;
     height: 100dvh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +76,7 @@
     }
     .projecte {
       border: 5px solid #181706;
+      background-color: #240707;
       border-radius: 50px;
       width: calc(100% - 120px);
       height: calc(100dvh - 120px);
@@ -44,6 +84,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media screen and (min-width: 1240px) {
+        flex-direction: row;
+      }
       .blanc,
       .vermell {
         border: 3px solid greenyellow;
@@ -86,6 +129,9 @@
       height: 100%;
       background-color: white;
       overflow: hidden;
+      img {
+        width: 100%;
+      }
     }
 
     /* Base inferior del portátil */

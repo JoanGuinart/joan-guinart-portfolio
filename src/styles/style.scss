@@ -5,24 +5,3 @@ body {
 }
 
 
-.projectes {
-  position: sticky;
-  top: 0;
-  height: 100dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:first-child {
-    background-color: #fff;
-  }
-  &:not(:first-child) {
-    background-color: transparent;
-  }
-  .projecte {
-    background-color: #000;
-    border: 5px solid #fff898;
-    border-radius: 50px;
-    width: calc(100% - 120px);
-    height: calc(100dvh - 120px);
-  }
-}

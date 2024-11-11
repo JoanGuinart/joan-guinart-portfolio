@@ -1,7 +1,7 @@
 .test {
   width: 100%;
   height: 100dvh;
-  background-color: rgb(0, 255, 217);
+  background-color: #A8D5BA;
 }
 .portada {
   width: 100%;
@@ -11,14 +11,19 @@
   .scroll-container {
     position: relative;
   }
+  .nom-nom, .text-text {
+    display: flex;
+    flex-direction: column;
+    color: rgb(116, 83, 64);
+  }
 
   .scroll-pointer {
     position: absolute;
     width: 60px;
     height: 60px;
-    background-color: rgba(0, 123, 255, 0.8);
+    background-color: rgba(42, 139, 243, 0.8);
     border-radius: 50%;
-    pointer-events: none; 
+    pointer-events: none;
     transition: transform 0.3s ease-out; /* Transició suau */
     z-index: 10;
     display: flex;
@@ -29,14 +34,11 @@
   .text {
     width: 100%;
     height: calc(50dvh + 1px);
-    font-size: 180px;
     text-align: center;
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 255, 144);
+    background-color: rgba(143, 197, 255, 1);
     z-index: 2;
-    font-family: "Cairo", sans-serif;
-    font-weight: 700;
     text-transform: uppercase;
   }
 
@@ -53,7 +55,6 @@
     width: 100%;
     height: 100dvh;
     z-index: -1;
-    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +62,5 @@
   .lorem {
     padding: 20px;
     text-transform: uppercase;
-    font-size: 4rem;
   }
 }

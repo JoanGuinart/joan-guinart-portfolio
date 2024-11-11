@@ -1,8 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Varela&display=swap");
+@import "variables.scss";
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+// Variables de breakpoints
+$tall1: 480px;
+$tall2: 768px;
+$tall3: 1024px;
+$tall4: 1200px;
+
+// Estilos de las clases escalables .e1 a .e6
+
+.e1,
+.e2,
+.e3,
+.e4,
+.e5,
+.e6 {
+  font-family: "Cairo", sans-serif;
+}
+
+.e1 {
+  font-size: clamp(45px, 10vw, 180px);
+  font-weight: 700;
+  letter-spacing: 10px;
+  line-height: 80%;
+}
 
 
+.e2 {
+  font-size: 28px;
+  @media screen and (min-width: $tall1) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: $tall2) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: $tall3) {
+    font-size: 64px;
+  }
+  @media screen and (min-width: $tall4) {
+    font-size: 96px;
+  }
+}
+
+.e3 {
+  font-size: 24px;
+  @media screen and (min-width: $tall1) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $tall2) {
+    font-size: 40px;
+  }
+  @media screen and (min-width: $tall3) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: $tall4) {
+    font-size: 64px;
+  }
+}
+
+.e4 {
+  font-size: 20px;
+  @media screen and (min-width: $tall1) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: $tall2) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $tall3) {
+    font-size: 40px;
+  }
+  @media screen and (min-width: $tall4) {
+    font-size: 48px;
+  }
+}
+
+.e5 {
+  font-size: 16px;
+  @media screen and (min-width: $tall1) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: $tall2) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $tall3) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: $tall4) {
+    font-size: 32px;
+  }
+}
+
+.e6 {
+  font-size: 14px;
+  @media screen and (min-width: $tall1) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: $tall2) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: $tall3) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: $tall4) {
+    font-size: 24px;
+  }
+}

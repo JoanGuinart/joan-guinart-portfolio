@@ -25,20 +25,30 @@ const Portada = () => {
     portada
       .fromTo(
         ".nom-nom",
-        { y: 0 },
-        { y: -window.innerHeight / 2, duration: 4, ease: "power2.in" }
+        { y: 0, lineHeight: "80%" },
+        {
+          y: -window.innerHeight / 2,
+          lineHeight: "140%",
+          duration: 4,
+          ease: "power2.in",
+        }
       )
       .fromTo(
         ".text-text",
-        { y: 0 },
-        { y: window.innerHeight / 2, duration: 4, ease: "power2.in" },
+        { y: 0, lineHeight: "80%" },
+        {
+          y: window.innerHeight / 2,
+          lineHeight: "180%",
+          duration: 4,
+          ease: "power2.in",
+        },
         "<"
       )
       .fromTo(
         ".nom",
         { y: 0 },
         {
-          y: -window.innerHeight / 1.5,
+          y: -window.innerHeight / 1.3,
           duration: 4,
           ease: "power2.in",
         },
@@ -48,7 +58,7 @@ const Portada = () => {
         ".text",
         { y: -1 },
         {
-          y: window.innerHeight / 1.5,
+          y: window.innerHeight / 1.3,
           duration: 4,
           ease: "power2.in",
         },
@@ -98,10 +108,15 @@ const Portada = () => {
           SCROLL
         </div>
         <div id="nom" className="nom">
-          <h1 className="nom-nom">Joan Guinart</h1>
+          <h1 className="nom-nom e1">
+            <span className="joan">Joan</span>{" "}
+            <span className="guinart">Guinart</span>
+          </h1>
         </div>
         <div className="text">
-          <h2 className="text-text">Frontend Developer</h2>
+          <h2 className="text-text e1">
+            <span>Frontend</span> <span>Developer</span>
+          </h2>
         </div>
         <div id="test" className="test">
           <p className="lorem">

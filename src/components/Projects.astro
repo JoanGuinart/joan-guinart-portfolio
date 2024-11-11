@@ -60,6 +60,8 @@ const projects = [
 }
 
 <style lang="scss">
+  @import "../styles/variables.scss";
+
   .projectes {
     position: sticky;
     top: 0;
@@ -114,10 +116,11 @@ const projects = [
       }
     }
     .laptop-container {
-      width: 600px;
-      height: 350px;
-      border: 16px solid #333;
-      border-radius: 20px;
+      width: 80%;
+      max-height: 350px;
+      aspect-ratio: 16/9;
+      border: 10px solid #333;
+      border-radius: 5px;
       position: relative;
       margin: 50px auto;
       background-color: #f0f0f0;
@@ -137,7 +140,7 @@ const projects = [
     /* Base inferior del portátil */
     .laptop-base {
       width: 120%;
-      height: 15px;
+      height: 5px;
       background: linear-gradient(
         to right,
         #b3b3b3 0%,
@@ -149,14 +152,18 @@ const projects = [
         #b3b3b3 100%
       );
       position: absolute;
-      bottom: -30px;
+      bottom: -15px;
       left: 50%;
       transform: translateX(-50%);
+      @media screen and (min-width: $tall1) {
+        height: 10px;
+        bottom: -20px;
+      }
 
       &::before {
         content: "";
         width: 100px;
-        height: 8px;
+        height: 6px;
         background: linear-gradient(
           to right,
           #808080 0%,

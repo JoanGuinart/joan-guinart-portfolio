@@ -1,7 +1,9 @@
+@import "variables.scss";
+
 .test {
   width: 100%;
   height: 100dvh;
-  background-color: #A8D5BA;
+  background-color: #a8d5ba;
 }
 .portada {
   width: 100%;
@@ -11,7 +13,8 @@
   .scroll-container {
     position: relative;
   }
-  .nom-nom, .text-text {
+  .nom-nom,
+  .text-text {
     display: flex;
     flex-direction: column;
     color: rgb(116, 83, 64);
@@ -26,9 +29,12 @@
     pointer-events: none;
     transition: transform 0.3s ease-out; /* Transició suau */
     z-index: 10;
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+    @media screen and (min-width: $tall2) {
+      display: flex;
+    }
   }
   .nom,
   .text {
@@ -40,6 +46,18 @@
     background-color: rgba(143, 197, 255, 1);
     z-index: 2;
     text-transform: uppercase;
+    position: relative;
+    .cv,
+    .email {
+      position: absolute;
+      bottom: 15px;
+    }
+    .cv {
+      left: 20px;
+    }
+    .email {
+      right: 20px;
+    }
   }
 
   .nom {

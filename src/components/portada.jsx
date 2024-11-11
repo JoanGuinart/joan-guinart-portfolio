@@ -16,9 +16,9 @@ const Portada = () => {
       scrollTrigger: {
         trigger: container.current,
         start: "top top",
-        end: "+=4000",
+        end: "+=2000",
         pin: true,
-        scrub: 0.5,
+        scrub: 2,
       },
     });
 
@@ -29,7 +29,7 @@ const Portada = () => {
         {
           y: -window.innerHeight / 2,
           lineHeight: "140%",
-          duration: 4,
+          duration: 2,
           ease: "power2.in",
         }
       )
@@ -39,7 +39,7 @@ const Portada = () => {
         {
           y: window.innerHeight / 2,
           lineHeight: "180%",
-          duration: 4,
+          duration: 2,
           ease: "power2.in",
         },
         "<"
@@ -49,7 +49,7 @@ const Portada = () => {
         { y: 0 },
         {
           y: -window.innerHeight / 1.3,
-          duration: 4,
+          duration: 2,
           ease: "power2.in",
         },
         "<"
@@ -59,7 +59,7 @@ const Portada = () => {
         { y: -1 },
         {
           y: window.innerHeight / 1.3,
-          duration: 4,
+          duration: 2,
           ease: "power2.in",
         },
         "<"
@@ -117,9 +117,11 @@ const Portada = () => {
           <h2 className="text-text e1">
             <span>Frontend</span> <span>Developer</span>
           </h2>
+          <p className="cv e3">CV</p>
+          <p className="email e3">Email</p>
         </div>
         <div id="test" className="test">
-          <p className="lorem">
+          <p className="lorem e4">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
             asperiores laudantium ab inventore nam neque atque molestias, odit
             tempore adipisci cumque nemo saepe perferendis enim minus! Minima ab

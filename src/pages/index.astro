@@ -1,10 +1,12 @@
 ---
-import Portada from "@components/portada";
+import Portada from "@components/Portada.astro";
 import Projects from "@components/Projects.astro";
 import Layout from "@layouts/Layout.astro";
+
+
 ---
 
 <Layout title="Joan Guinart">
-  <Portada client:only="react" />
+  <Portada />
   <Projects />
 </Layout>
